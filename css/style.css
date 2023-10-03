@@ -35,13 +35,128 @@ img {
   max-width: 100%;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 35em;
+}
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+
+}
+
+nav ul li {
+padding-left: 1.25em;
+text-transform: uppercase;
+font-size: var(--font-size-md);
+font-weight: 500;
+}
+
+nav ul li a:link, 
+nav ul li a:visited {
+color: #000;
+text-decoration: none;
+
+}
+
+.grid13 {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 1em;
+}
+
+.grid13 img {
+  width: 100%; 
+  max-width: 100%; 
+  border-radius: 0.7em;
+}
+
+
+.grid13 img:first-child {
+  grid-column: 1 / span 3; 
+}
+
+#val-text {
+  margin-bottom: 3em;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+#limited {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#flavour {
+  margin: 0;
+}
+
+.bodytext {
+  font-size: var(--font-size-base);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em; /* Adjust padding as needed */
+  background-color: #000; 
+  color: #fff; 
+  border-radius: 0.3em; 
+  text-decoration: none; 
+  font-weight: 100;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.10); /* Scale up the button on hover */
+}
+
+#dough {
+  margin: 3em;
+}
+#dough > div > h2 {
+text-align: center;
+padding: 1em;
+}
 
 
 
+#testimonials {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 2em;
+  
+}
 
+#testimonials > div > h2 {
+  text-align: center;
+  padding: 1em;
+}
 
+.bodytext-center {
+text-align: left;
+font-size: var(--font-size-base);
 
+}
 
+p em {
+  font-size: var(--font-size-base);
+  margin-bottom: 1em;
+}
 
  /* TABLET 768 */
 @media (min-width:48em) {
