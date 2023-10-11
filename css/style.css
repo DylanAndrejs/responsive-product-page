@@ -15,11 +15,11 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-  font-family:'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #222;
   scroll-behavior: smooth;
@@ -38,7 +38,6 @@ img {
 .wrapper {
   margin: 0 auto;
   max-width: 35em;
-  
 }
 
 #company-logo img {
@@ -50,60 +49,53 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 nav ul {
-display: flex;
-list-style: none;
-
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-padding-left: 1.25em;
-text-transform: uppercase;
-font-size: var(--font-size-base);
-font-weight: 500;
+  padding-left: 1.25em;
+  text-transform: uppercase;
+  font-size: var(--font-size-base);
+  font-weight: 500;
 }
 
-nav ul li a:link, 
+nav ul li a:link,
 nav ul li a:visited {
-color: #000;
-text-decoration: none;
+  color: #000;
+  text-decoration: none;
+}
 
+header::after {
+  content: "";
+  display: block;
+  height: 0.25em;
+  background-color: #f0f0f0;
+  margin-top: 2em;
+  clear: both;
 }
 
 .grid1 {
-  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
 }
 
 .grid1 img {
-  width: 100%; 
-  max-width: 100%; 
+  width: 100%;
+  max-width: 100%;
   border-radius: 0.7em;
 }
 
-
 .grid1 img:first-child {
-  grid-column: 1 / span 3; 
+  grid-column: 1 / span 3;
 }
 
-#valentine {
-
-
-}
-
-
-#valentine::after {
-  content: "";
-  display: block;
-  height: 0.25em;
-  background-color: #f0f0f0; 
-  margin: 2em 0;
-  clear: both;
+#valentine p {
+  font-size: var(--font-size-base);
 }
 
 h1 {
@@ -122,44 +114,49 @@ h1 {
   margin: 0;
 }
 
+#valentine::after {
+  content: "";
+  display: block;
+  height: 0.25em;
+  background-color: #f0f0f0;
+  margin: 2em 0;
+  clear: both;
+}
+
 blockquote {
   font-size: var(--font-size-base);
 }
 
 .button {
   display: inline-block;
-  padding: 0.5em 1em; /* Adjust padding as needed */
-  background-color: #000; 
-  color: #fff; 
-  border-radius: 0.3em; 
-  text-decoration: none; 
+  padding: 0.5em 1em;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.3em;
+  text-decoration: none;
   font-weight: 100;
   transition: transform 0.2s;
 }
 
 .button:hover {
-  transform: scale(1.10); /* Scale up the button on hover */
+  transform: scale(1.10);
 }
 
 #dough {
   margin-bottom: 2em;
   padding: 1em;
-  
 }
- 
+
 #dough > div > h2 {
-text-align: center;
-padding: 1em;
+  text-align: center;
+  padding: 1em;
 }
-
-
 
 #testimonials {
   background-color: #000;
   color: #fff;
   padding-bottom: 2em;
   width: 100%;
-  
 }
 
 #testimonials > div > h2 {
@@ -168,10 +165,9 @@ padding: 1em;
 }
 
 .bodytext-center {
-padding-left: 1em;
-text-align: left;
-font-size: var(--font-size-base);
-
+  padding-left: 1em;
+  text-align: left;
+  font-size: var(--font-size-base);
 }
 
 p {
@@ -181,14 +177,13 @@ p {
 
 #tryitwith {
   text-align: center;
- 
 }
 
 #tryitwith::after {
   content: "";
   display: block;
   height: 0.25em;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   margin-top: 2em;
   clear: both;
 }
@@ -198,14 +193,12 @@ p {
   grid-template-columns: 1fr 1fr;
   text-align: center;
   gap: 1.5em;
-  
 }
 
 .flavour-grid article {
-background-color: #f0f0f0;
-width: 100%;
-border-radius: 1em;
-
+  background-color: #f0f0f0;
+  width: 100%;
+  border-radius: 1em;
 }
 
 .flavour-grid article img {
@@ -218,139 +211,147 @@ footer {
   padding: 1em;
 }
 
+/* TABLET 768 MEDIA QUERY */
+@media (min-width: 48em) {
+  header {
+    margin-top: 1em;
+  }
 
-
-
-
-
- /* TABLET 768 MEDIA QUERY*/
-@media (min-width:48em) {
-
-header {
-  margin-top: 1em;
-}
-
-#company-logo img {
+  #company-logo img {
     width: 12em;
   }
 
-.wrapper  {
+  .wrapper {
     margin: 0 auto;
     max-width: 50em;
   }
 
-  /* valentines grid */
-.grid1 {
-  grid-template-columns: 1fr 1fr;
+  /* Valentines grid */
+  .grid1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid1 img:first-child {
+    grid-column: 1;
+  }
+
+  /* Behind the dough section */
+  #dough .wrapper div {
+    display: flex;
+    gap: 2em;
+  }
+
+  #dough .wrapper h2 {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  /* Testimonials */
+  #testimonials div h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #testimonials .wrapper div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Flavour grid */
+  .flavour-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
-.grid1 img:first-child {
-  grid-column: 1; 
-}
-
-  /* behind the dough section */
-#dough .wrapper div {
-  display: flex;
-  gap: 2em;
-}
-
-#dough .wrapper h2 {
-margin: 0;
-padding-top: 0;
-}
-
-
-/* testimonials */
-#testimonials  div h2 {
-  padding-bottom:0;
-  margin-bottom: 0;
-}
-
-#testimonials .wrapper div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* flavour grid */
-.flavour-grid {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-}
-
-
-
-
-
-
-
-
-
- /* DESKTOP 960 */
- @media (min-width:60em) {
-
+/* DESKTOP 960 */
+@media (min-width: 60em) {
   .wrapper {
     margin: 0 auto;
-    max-width: 60em;
+    max-width: 70em;
   }
 
   header {
-  margin-top: 1em;
-}
+    margin-top: 1em;
+  }
 
-#company-logo img {
+  #company-logo img {
     width: 16em;
   }
 
-
-nav ul li {
-  padding-left: 1.25em;
-  text-transform: uppercase;
-  font-size: var(--font-size-md);
-  font-weight: 500;
+  nav ul li {
+    padding-left: 1.25em;
+    text-transform: uppercase;
+    font-size: var(--font-size-md);
+    font-weight: 500;
   }
 
-#valentine {
-  margin-top: 2em;
-}
+  #valentine {
+    margin-top: 2em;
+  }
 
- .container  {
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  #valentine p {
+    font-size: var(--font-size-md);
+  }
+
+  .container {
     display: flex;
     gap: 1.5em;
   }
-  
+
   .grid1 {
-    flex: 1; 
+    flex: 1;
     display: grid;
-    grid-template-columns: 1fr(repeat);
-   
+    grid-template-columns: 1fr 1fr;
   }
 
   .grid1 img {
-  min-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
   }
 
-  
-
-  
- .valentine-text{
-    flex: 1; /* Allow the text div to take available space */
+  .valentine-text {
+    flex: 1;
   }
-  
+
   .valentine-text h1 {
     font-size: var(--font-size-lg);
     font-weight: 500;
     margin-bottom: 0;
     margin-top: 0;
   }
-
- }
-
-  /* WIDESCREEN */
-@media (min-width:80em) {
-
 }
 
+/* WIDESCREEN */
+@media (min-width: 90em) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 90em;
+  }
+
+  header {
+    padding-top: 1em;
+    margin: 0;
+  }
+
+  #company-logo img {
+    width: 22em;
+  }
+
+  nav ul li {
+    font-size: var(--font-size-lg);
+  }
+
+  #dough p {
+    font-size: var(--font-size-md);
+  }
+
+  #dough .wrapper h2 {
+    margin: 0;
+    padding-top: 0;
+  }
+}
